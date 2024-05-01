@@ -27,25 +27,24 @@ Grammar for a simple language that performs basic input, output, and arithmetic 
 
 ## Grammar Rules:
 
-Program -> Statement ; { Statement ; }
+### Program -> Statement ; { Statement ; }
 
 - A program consists of one or more statements separated by semicolons.
-Statement -> InputStatement | OutputStatement | Expression ;
+### Statement -> InputStatement | OutputStatement | Expression ;
 
 - A statement can be for input, output, or an expression followed by a semicolon.
-InputStatement -> INPUT IDENTIFIER ;
+### InputStatement -> INPUT IDENTIFIER ;
 
 - Input statement uses the INPUT keyword followed by an identifier (variable name) to store the input value.
-OutputStatement -> OUTPUT Expression ;
+### OutputStatement -> OUTPUT Expression ;
 
 - Output statement uses the OUTPUT keyword followed by an expression to be displayed.
-Expression -> Term { ( PLUS | MINUS ) Term }
+### Expression -> Term { ( PLUS | MINUS ) Term }
 
 - An expression is formed by one or more terms connected by addition or subtraction operators.
-Term -> Factor { ( MULTIPLY | DIVIDE ) Factor }
+### Term -> Factor { ( MULTIPLY | DIVIDE ) Factor }
 
 - A term is formed by one or more factors connected by multiplication or division operators.
-Factor -> NUMBER | IDENTIFIER | ( Expression )
+### Factor -> NUMBER | IDENTIFIER | ( Expression )
 
 - A factor can be a number, an identifier (variable name), or an expression enclosed in parentheses.
-
